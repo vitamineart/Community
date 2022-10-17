@@ -1,0 +1,27 @@
+extends ./layout/base
+block variables
+    - var pageTitle = 'Private Community'
+
+prepend preload
+
+append head
+
+
+block page
+    .hero.bg-rose.text-white.font-bold.py-8
+        .container.flex.items-center.justify-between.flex-nowrap
+            div
+                span(class="text-2xl font-normal") Lorem, ipsum
+                div(class="text-5xl") Text Headline
+
+            img(src="../img/hero.png", width="636" height="371" alt="alt" class="translate-x-14" style="margin-left: -20px;")
+    .container
+        h1(class="text-3xl font-bold text-rose mt-8") Headline
+        p(class="mt-2") Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa architecto a animi earum officiis consectetur aut nulla similique mollitia, voluptatum, officia laudantium esse dolore. Aut, maiores! Aut, consequatur obcaecati, maxime, esse est eum blanditiis aperiam temporibus sint natus dignissimos odio dolorum inventore debitis vitae voluptates at corporis sed!
+        p(class="mt-2") Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusantium magni adipisci vel numquam laboriosam quaerat doloribus suscipit cupiditate praesentium aliquam sint omnis libero quod excepturi ab ipsa dolores! Voluptas labore at voluptates quaerat facere eum in eius unde vero molestiae, quisquam adipisci tenetur illo et deserunt, dolorem sed, non aliquid illum eaque praesentium! Deserunt, optio dignissimos?
+
+
+prepend footer_scripts
+
+
+

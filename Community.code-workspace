@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"netlify.site_id": "community.netlify.app",
+		"liveServer.settings.port": 5501
+	}
+}

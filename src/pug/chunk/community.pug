@@ -1,0 +1,105 @@
+-
+    const community = [
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item1.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item2.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item3.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item4.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item5.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item6.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item7.jpg'
+
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item8.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item9.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item10.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item11.jpg'
+        },
+        {
+            category: 'Telecom',
+            name: 'Greg Hammer',
+            role: 'MD',
+            type: 'Print',
+            image: 'img/works_clients_item12.jpg'
+        },
+    ]
+
+    // works-clients grid random appear
+    //- const timeNums = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600];
+
+section(class="py-10 md:py-16 mt-10 bg-stone-200")
+    .container
+        h2.text-3xl.font-bold.text-center.text-blue-900 People List
+        div(class="mt-6 md:mt-10 grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))")
+            each person in community
+                a.item(href="#" class="m-auto max-w-sm sm:max-w-none relative block overflow-hidden group min-w-fit no-underline p-2 shadow-xl text-black bg-white")
+                    //- .overlay(class="absolute inset-0 grid place-items-center opacity-0 z-50 bg-blue-dark/80 duration-500 transition-opacity pointer-events-none group-hover:opacity-100")
+                        .text(class="text-center text-white tracking-wide")
+                    img(loading="lazy" width="470" height="262" src="../../img/person.png" class="relative w-full h-full z-0 duration-1000   border-3 border-current text-white hover:text-blue ")
+                    p.font-bold.p-2 #{person.name}, #{person.role}
+
+
+

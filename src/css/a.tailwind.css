@@ -1,0 +1,29 @@
+@tailwind base;
+@layer base {
+  :root {
+    --c-blue-light: #338bc8;
+    --c-blue-link: #2581d0;
+    --c-blue: #185599;
+    --c-blue-dark: #071f51;
+    --c-indigo-light: #76769f;
+    --c-indigo: #121341;
+    --f-inter: "Inter", sans-serif;
+  }
+  body {
+    @apply font-inter font-light;
+  }
+  a {
+    @apply underline text-blue-light;
+  }
+  a:hover {
+    @apply no-underline;
+  }
+  .container {
+    @apply px-6 sm:px-8 md:px-10 mx-auto max-w-5xl;
+  }
+  b, strong {
+    @apply font-bold;
+  }
+}
+@tailwind components;
+@tailwind utilities;
