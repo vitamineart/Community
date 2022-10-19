@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'rose': '#E45171'
+        'rose': '#E45171',
+        'blue': '#002C6A'
       },
       borderWidth: {
 

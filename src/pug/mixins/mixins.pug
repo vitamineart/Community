@@ -1,0 +1,16 @@
+//- svg icons
+mixin iconMono(x)
+    if x.style
+        svg(class=`svg ${x.classes}` style=`${x.style}`)
+            use(xlink:href=`img/icons/icons-sprite-mono.svg#${x.icon}`)
+    else
+        svg(class=`svg ${x.classes}`)
+            use(xlink:href=`img/icons/icons-sprite-mono.svg#${x.icon}`)
+
+mixin iconMulti(x)
+    if x.style
+        svg(class=`svg ${x.classes}` style=`${x.style}`)
+            use(xlink:href=`img/icons/icons-sprite-multi.svg#${x.icon}`)
+    else
+        svg(class=`svg ${x.classes}`)
+            use(xlink:href=`img/icons/icons-sprite-multi.svg#${x.icon}`)

@@ -7,7 +7,7 @@
             hobbies: 'Author, "Gain Without Pain"',
             contacts: {
                 linkedin:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/",
-                twitter:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+
             }
         },
         {
@@ -17,7 +17,7 @@
             hobbies: 'Author, "Gain Without Pain"',
             contacts: {
                 linkedin:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/",
-                twitter:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+
             }
         },
         {
@@ -27,7 +27,7 @@
             hobbies: 'Author, "Gain Without Pain"',
             contacts: {
                 linkedin:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/",
-                twitter:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+
             }
         },
         {
@@ -37,7 +37,7 @@
             hobbies: 'Author, "Gain Without Pain"',
             contacts: {
                 linkedin:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/",
-                twitter:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+
             }
         },
         {
@@ -47,7 +47,7 @@
             hobbies: 'Author, "Gain Without Pain"',
             contacts: {
                 linkedin:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/",
-                twitter:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+
             }
         },
         {
@@ -57,7 +57,7 @@
             hobbies: 'Author, "Gain Without Pain"',
             contacts: {
                 linkedin:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/",
-                twitter:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+
             }
         },
         {
@@ -67,7 +67,7 @@
             hobbies: 'Author, "Gain Without Pain"',
             contacts: {
                 linkedin:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/",
-                twitter:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+
             }
         },
         {
@@ -77,7 +77,7 @@
             hobbies: 'Author, "Gain Without Pain"',
             contacts: {
                 linkedin:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/",
-                twitter:"https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+
             }
         },
 
@@ -91,20 +91,24 @@ section(class="py-10 md:py-16 mt-10 bg-stone-200")
         h2.text-3xl.font-bold.text-center.text-blue-900 People List
         div(class="mt-6 md:mt-10 grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))")
             each person in community
-                div.item(href="#" class="m-auto max-w-sm sm:max-w-none relative block overflow-hidden group min-w-fit no-underline p-2 shadow-xl text-black bg-white")
-                    .overlay(class="absolute inset-0 p-3 grid place-items-center opacity-0 z-50 bg-blue-dark/80 duration-500 transition-opacity group-hover:opacity-100 group-hover:backdrop-blur-sm")
-                        .text(class="text-center text-white tracking-wide")
-                            header.font-bold #{person.name}, #{person.role}
-                            div(class="text-xs mt-2") #{person.company}
-                            div(class="text-xs mt-2") #{person.hobbies}
-
-                            - let social = Object(person.contacts)
-                            each val, key in social
-                                a(href=`${val}` class="text-gray-light hover:text-blue-light mx-1" target="_blank") #{key}
-
-
-                    img(loading="lazy" width="470" height="262" src="../../img/person.png" class="relative w-full h-full z-0 duration-1000   border-3 border-current text-white hover:text-blue ")
-                    p.font-bold.p-2 #{person.name}, #{person.role}
+                .card(href="#" class="h-full w-full m-auto relative min-h-min no-underline p-2 text-black")
+                    .card-content
+                        .back(class="absolute inset-0 min-h-full min-w-full p-3 grid place-items-center z-50 bg-blue shadow-xl")
+                            .text(class="text-center text-white tracking-wide")
+                                header.font-bold #{person.name}, #{person.role}
+                                div(class="text-xs mt-2") #{person.company}
+                                div(class="text-xs mt-2") #{person.hobbies}
+                                div(class="contacts flex items-center justify-center pt-5")
+                                    - let social = Object(person.contacts)
+                                    each val, key in social
+                                        a(href=`${val}` class="text-white inline-block hover:text-sky-500 mx-1" target="_blank")
+                                            +iconMono({
+                                                classes: 'svg w-8 h-8 fill-current',
+                                                icon: key
+                                            })
+                        .front.shadow-xl.bg-white
+                            img(loading="lazy" width="470" height="262" src="../../img/person.png" class="relative w-full h-full z-0 duration-1000   border-3 border-current text-white hover:text-blue ")
+                            p.font-bold.p-2 #{person.name}, #{person.role}
 
 
 

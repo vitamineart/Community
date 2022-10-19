@@ -5,3 +5,41 @@ header.header {
 .community-grid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
+.card {
+  perspective: 700px;
+  min-height: 250px;
+}
+
+.card-content {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+}
+
+.card .front {
+  height: 100%;
+  padding: 10px;
+}
+
+.card .front img {
+  height: 84%;
+  object-fit: cover;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}

@@ -13,7 +13,7 @@
     @apply font-inter font-light;
   }
   a {
-    @apply underline text-blue-light;
+    @apply underline;
   }
   a:hover {
     @apply no-underline;

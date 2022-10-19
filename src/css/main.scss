@@ -8,3 +8,40 @@ header.header {
 }
 
 
+.card {
+  perspective: 700px;
+  min-height: 250px;
+}
+
+.card-content {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.card:hover .card-content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.card .front,
+.card .back {
+  // position: absolute;
+  // height: 100%;
+  // width: 100%;
+  // inset: 0;
+  backface-visibility: hidden;
+}
+.card .front {
+  height: 100%;
+  padding: 10px;
+}
+.card .front img {
+  height: 84%;
+  object-fit: cover;
+}
+.card .back {
+  transform: rotateY( 180deg );
+}
