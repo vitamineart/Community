@@ -7,11 +7,11 @@
         --c-blue-dark: #071f51;
         --c-indigo-light: #76769f;
         --c-indigo: #121341;
-        --f-inter: 'Inter', sans-serif;
+        --f-open-sans: 'Open Sans', sans-serif;
 
     }
     body {
-        @apply font-inter font-light;
+        @apply font-opensans font-light;
     }
     a {
         @apply underline;
@@ -20,7 +20,7 @@
         }
     }
     .container {
-        @apply px-6 sm:px-8 md:px-10 mx-auto max-w-5xl;
+        @apply px-6 sm:px-8 md:px-10 mx-auto max-w-6xl;
     }
     b, strong {
         @apply font-bold;

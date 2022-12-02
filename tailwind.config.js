@@ -18,7 +18,7 @@ module.exports = {
 
       },
       fontFamily: {
-        'inter': `'Inter', sans-serif`
+        'opensans': `'Open Sans', sans-serif`
       },
       willChange: {
       },

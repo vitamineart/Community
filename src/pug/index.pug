@@ -8,18 +8,38 @@ append head
 
 
 block page
-    .hero.bg-rose.text-white.font-bold.py-8
-        .container.flex.items-center.justify-between.flex-nowrap
-            div
-                span(class="text-2xl font-normal") Lorem, ipsum
-                div(class="text-5xl") Text Headline
+    section(class=" hero text-white py-10 relative min-h-[400px]")
+        .container.z-10.relative
+            .flex.justify-between.items-center
+                img(src="img/logo.svg", alt="Partnerships For Change Logo" width="172" height="69" class="w-24 xs:w-32 lg:w-auto" )
 
-            img(src="../img/hero.png", width="636" height="371" alt="alt" class="translate-x-14" style="margin-left: -20px;")
-    .container
-        h1(class="text-3xl font-bold text-rose mt-8") Headline
-        p(class="mt-2") Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa architecto a animi earum officiis consectetur aut nulla similique mollitia, voluptatum, officia laudantium esse dolore. Aut, maiores! Aut, consequatur obcaecati, maxime, esse est eum blanditiis aperiam temporibus sint natus dignissimos odio dolorum inventore debitis vitae voluptates at corporis sed!
-        p(class="mt-2") Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusantium magni adipisci vel numquam laboriosam quaerat doloribus suscipit cupiditate praesentium aliquam sint omnis libero quod excepturi ab ipsa dolores! Voluptas labore at voluptates quaerat facere eum in eius unde vero molestiae, quisquam adipisci tenetur illo et deserunt, dolorem sed, non aliquid illum eaque praesentium! Deserunt, optio dignissimos?
 
+                a(href="#" class="no-underline border border-current  px-4 py-2 sm:px-8 sm:py-3 rounded-[4px] inline-flex items-center text-sm xs:text-base xs:leading-none text-white hover:bg-white hover:text-orange-500 md:text-gray-500 transition-colors duration-300")
+                    span Contact
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" class="ml-1">
+                        <path d="M16.4053 3.9375L9.65527 10.125L2.90527 3.9375" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.90527 3.9375H16.4053V13.5C16.4053 13.6492 16.346 13.7923 16.2405 13.8977C16.135 14.0032 15.992 14.0625 15.8428 14.0625H3.46777C3.31859 14.0625 3.17552 14.0032 3.07003 13.8977C2.96454 13.7923 2.90527 13.6492 2.90527 13.5V3.9375Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.4248 9L3.08105 13.9008" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.2295 13.9008L10.8857 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+            div(class="max-lg:flex-col flex pt-20 xs:pt-24 xs:pb-10 sm:pt-28 sm:pb-12 lg:py-14 items-center")
+                div(class=" hero-title leading-tight text-center lg:text-left max-sm:px-10")
+                    div(class="max-md:text-3xl max-lg:text-4xl font-light lg:whitespace-nowrap ") Hello from Friends&nbsp;of
+                    b Partnerships For Change
+
+                img(src="img/hero_collage@632.png" srscet="img/hero_collage@317.png 317w, img/hero_collage@474.png 474w, img/hero_collage@632.png 632w, img/hero_collage@947.png 947w, img/hero_collage@1262.png 1262w, img/hero_collage@1893.png 1893w" alt="Friends Collage" width="622" height="376" class="friends-collage lg:w-8/12 xl:w-auto mt-6 sm:mt-10")
+
+        div(class="hero-bg absolute inset-0 w-full h-full z-0 overflow-hidden")
+            img(src="img/Planet.svg" width="874" height="780" alt="alt" class="mix-blend-color-burn absolute inset-0 m-auto z-10 hero-bg-planet opacity-50")
+            div(class="hero-bg-gradient friends-gradient absolute inset-0 w-full h-full z-0")
+
+    section(style="background-color: #EAEAEA;" class="py-5 lg:py-9")
+        .container.flex.justify-center.space-x-36
+            div Jackie Miller
+            div Andrew Michael
+
+    include ./chunk/friends
 
 prepend footer_scripts
 
