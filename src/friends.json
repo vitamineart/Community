@@ -1,5 +1,4 @@
--
-    const friends = [
+[
   {
     "id": 1,
     "name": "Greg Hammer, MD",
@@ -36,9 +35,9 @@
     "role": "Lawyer",
     "image": "MandyHawes",
     "description": "Partner at class-action litigation firm Alexander, Hawes & Audet. Graduate of Wellesley College. Awarded Juris Doctorate by Harvard Law School. Pioneer in toxic chemical litigation and medical effects of toxic chemicals.",
-    //- "contacts": {
-    //-   "linkedin": "https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
-    //- }
+    "contacts": {
+      "linkedin": "https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+    }
   },
   {
     "id": 5,
@@ -76,9 +75,9 @@
     "role": "National Geographic Photographer",
     "image": "RandyOlson",
     "description": "Professional photographer specializing in global narratives in social documentary, commercial and advertising photography.",
-    //- "contacts": {
-    //-   "linkedin": "https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
-    //- }
+    "contacts": {
+      "linkedin": "https://www.linkedin.com/in/meg-hurtado-bloom-547aa210/"
+    }
   },
   {
     "id": 9,
@@ -140,41 +139,4 @@
       "linkedin": "https://www.linkedin.com/in/carolannwentworth/"
     }
   }
-  ]
-
-    // works-clients grid random appear
-    //- const timeNums = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600];
-
-section(class="py-10 md:py-16")
-    .container
-        header(class="body-title leading-tight font-bold text-center") Friends of Friends
-        div( class="mt-6 md:mt-10 items-center friends-grid" )
-            each friend, index in friends
-                .card(href="#" class=`h-full w-full m-auto relative min-h-min no-underline text-black card-${friend.id}`)
-                    .card-content
-                        .back(class="p-5 absolute inset-0 z-50 friends-gradient shadow-xl rounded-3xl" )
-                            .text(class="text-center text-white tracking-wide flex flex-col items-center h-full")
-                                if (friend.name.back)
-                                    header(class="text-lg name font-bold after:block after:mx-auto after:my-1.5 after:h-[2px] after:w-2 after:bg-white") #{friend.name.back}
-                                else
-                                    header(class="text-lg name font-bold after:block after:mx-auto after:my-1.5 after:h-[2px] after:w-2 after:bg-white") #{friend.name}
-
-                                b(class="role text-xs") #{friend.role}
-                                div(class="text-[9px] pt-4 flex-1 description") #{friend.description}
-                                div(class="contacts flex items-center justify-center pt-2.5")
-                                    - let social = Object(friend.contacts)
-                                    each val, key in social
-                                        a(href=`${val}` class="text-white inline-block mx-1" target="_blank")
-                                            +iconMono({
-                                                classes: 'svg w-8 h-8 fill-current',
-                                                icon: key
-                                            })
-                        .front.shadow-xl.bg-white.rounded-3xl.absolute.inset-0.w-full.h-full
-                            img(loading="lazy" width="170" height="170" src=`img/friends/${friend.image}@680.png` class="absolute w-full h-full inset-0 object-cover z-0 ")
-                            div(class="absolute py-2.5 left-0 right-auto bottom-9 friends-gradient rounded-r-full")
-                                if (friend.name.front)
-                                    p(class=" font-bold px-6 text-white") #{friend.name.front}
-                                else
-                                    p(class=" font-bold px-6 text-white") #{friend.name}
-
-
+]
