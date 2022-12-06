@@ -83,48 +83,6 @@
 }
 
 @media (min-width: 900px) {
-  .card-1 {
-    grid-area: a;
-  }
-  .card-2 {
-    grid-area: b;
-  }
-  .card-3 {
-    grid-area: c;
-  }
-  .card-4 {
-    grid-area: d;
-  }
-  .card-5 {
-    grid-area: e;
-  }
-  .card-6 {
-    grid-area: f;
-  }
-  .card-7 {
-    grid-area: g;
-  }
-  .card-8 {
-    grid-area: h;
-  }
-  .card-9 {
-    grid-area: i;
-  }
-  .card-10 {
-    grid-area: j;
-  }
-  .card-11 {
-    grid-area: k;
-  }
-  .card-12 {
-    grid-area: l;
-  }
-  .card-13 {
-    grid-area: m;
-  }
-  .card-14 {
-    grid-area: n;
-  }
   .friends-grid {
     --gap: 20px;
     grid-template-columns: repeat(6, auto);
@@ -160,11 +118,6 @@
 .card:hover .card-content {
   transform: rotateY(180deg);
   transition: transform 0.5s;
-}
-
-.card .text {
-  display: flex;
-  flex-direction: column;
 }
 
 .card .text header.name {

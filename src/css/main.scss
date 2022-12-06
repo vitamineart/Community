@@ -13,9 +13,6 @@
   background: linear-gradient(200deg, #FCB560, #F47C5A);
   filter: saturate(1.1);
 }
-.hero-bg-gradient {
-
-}
 
 .hero-bg-planet {
     rotate: -28deg;
@@ -42,11 +39,6 @@
     rotate: -28deg;
     translate: -30% 25%;
     scale: 1.7;
-  }
-}
-@media (min-width: 768px){
-  .hero-bg-planet {
-
   }
 }
 .hero-bg {
@@ -91,20 +83,7 @@
 
 
 @media (min-width: 900px){
-  .card-1 { grid-area: a; }
-  .card-2 { grid-area: b; }
-  .card-3 { grid-area: c; }
-  .card-4 { grid-area: d; }
-  .card-5 { grid-area: e; }
-  .card-6 { grid-area: f; }
-  .card-7 { grid-area: g; }
-  .card-8 { grid-area: h; }
-  .card-9 { grid-area: i; }
-  .card-10 { grid-area: j; }
-  .card-11 { grid-area: k; }
-  .card-12 { grid-area: l; }
-  .card-13 { grid-area: m; }
-  .card-14 { grid-area: n; }
+
   .friends-grid {
     --gap: 20px;
     grid-template-columns: repeat(6, auto);
@@ -119,6 +98,7 @@
     '. . n n . .'
     ;
   }
+
 }
 @media (min-width: 1150px){
 
@@ -134,6 +114,7 @@
     '. l l m m n n .'
     ;
   }
+
 }
 
 
@@ -156,10 +137,6 @@
   transition: transform 0.5s;
 }
 
-.card .text {
-  display: flex;
-  flex-direction: column;
-}
 .card .text header.name {
   grid-area: header;
 }
@@ -172,19 +149,9 @@
 .card .text .contacts {
   grid-area: contacts;
 }
-
 .card .front,
 .card .back {
-  // position: absolute;
-  // height: 100%;
-  // width: 100%;
-  // inset: 0;
   backface-visibility: hidden;
-}
-.card .front {
-  // height: 100%;
-}
-.card .front img {
 }
 .card .back {
   transform: rotateY( 180deg );

@@ -7,8 +7,32 @@ prepend preload
     script(defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js")
     script(defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js")
     script(defer src="js/scripts.js" )
-append head
 
+append head
+    style.
+        @media (min-width: 900px) {
+            .card-1 { grid-area: a; }
+            .card-2 { grid-area: b; }
+            .card-3 { grid-area: c; }
+            .card-4 { grid-area: d; }
+            .card-5 { grid-area: e; }
+            .card-6 { grid-area: f; }
+            .card-7 { grid-area: g; }
+            .card-8 { grid-area: h; }
+            .card-9 { grid-area: i; }
+            .card-10 { grid-area: j; }
+            .card-11 { grid-area: k; }
+            .card-12 { grid-area: l; }
+            .card-13 { grid-area: m; }
+            .card-14 { grid-area: n; }
+        }
+
+        .friends-collage {
+            opacity: 0;
+        }
+        .hero-bg-planet {
+            opacity: 0;
+        }
 
 block page
     section(class=" hero text-white py-10 relative min-h-[400px]")
@@ -18,7 +42,7 @@ block page
                     img(src="img/logo.svg", alt="Partnerships For Change Logo" width="172" height="69" class="" )
 
 
-                a(href="mailto:tngstn@tungstenadvertising.com" target="_blank" class="no-underline border border-current  px-4 py-2 sm:px-8 sm:py-3 rounded-[4px] inline-flex items-center text-sm xs:text-base xs:leading-none text-white hover:bg-white hover:text-orange-500 md:text-gray-500 transition-colors duration-300")
+                a(href="mailto:jackie@partnershipsforchange.org" target="_blank" class="no-underline border border-current  px-4 py-2 sm:px-8 sm:py-3 rounded-[4px] inline-flex items-center text-sm xs:text-base xs:leading-none text-white hover:bg-white hover:text-orange-500 md:text-gray-500 transition-colors duration-300")
                     span Contact
                     <svg width="19" height="18" viewBox="0 0 19 18" fill="none" class="ml-1">
                         <path d="M16.4053 3.9375L9.65527 10.125L2.90527 3.9375" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -32,16 +56,16 @@ block page
                     div(class="max-md:text-3xl max-lg:text-4xl font-light lg:whitespace-nowrap ") Hello from Friends&nbsp;of
                     b Partnerships For Change
 
-                img(src="img/hero_collage@1893.png" srscet="img/hero_collage@317.png 317w, img/hero_collage@474.png 474w, img/hero_collage@632.png 632w, img/hero_collage@947.png 947w, img/hero_collage@1262.png 1262w, img/hero_collage@1893.png 1893w" alt="Friends Collage" width="622" height="376" class="friends-collage mt-6 sm:mt-10")
+                img(src="img/hero_collage@1893.png" srcset="img/hero_collage@313.png 313w, img/hero_collage@468.png 468w, img/hero_collage@624.png 624w, img/hero_collage@935.png 935w, img/hero_collage@1246.png 1246w, img/hero_collage@1869.png 1869w, img/hero_collage@2492.png 2492w" sizes="(max-width:690px) 92vw, 622px" alt="Friends Collage" width="622" height="376" class="friends-collage mt-6 sm:mt-10" style="filter: drop-shadow(0 4px 4px #00000055) brightness(1.05) saturate(1.1)")
 
 
         div(class="hero-bg absolute inset-0 w-full h-full z-0 overflow-hidden")
-            img(src="img/Planet.svg" width="874" height="780" alt="alt" class="mix-blend-color-burn absolute inset-0 m-auto z-10 hero-bg-planet opacity-50")
+            img(src="img/Planet.svg" width="874" height="780" alt="alt" class="mix-blend-color-burn absolute inset-0 m-auto z-10 hero-bg-planet")
             div(class="hero-bg-gradient friends-gradient absolute inset-0 w-full h-full z-0")
 
     section(style="background-color: #EAEAEA;" class="py-5 lg:py-9")
         div(class=" container text-left grid gap-4 xs:flex justify-center  xs:space-x-24 lg:space-x-36")
-            a(href="https://www.linkedin.com/in/jacqueline-miller-3254a411" class="md:text-lg lg:text-xl xl:text-2xl no-underline inline-flex items-center")
+            a(href="https://www.linkedin.com/in/jacqueline-miller-3254a411" target="_blank" class="md:text-lg lg:text-xl xl:text-2xl no-underline inline-flex items-center")
                 div(class="w-8 h-8 mr-2")
                     <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.5 0C7.67144 0 0.5 7.17144 0.5 16C0.5 24.8286 7.67144 32 16.5 32C25.3286 32 32.5 24.8286 32.5 16C32.5 7.17144 25.3286 0 16.5 0ZM12.3 23.8572H8.44284V12.3428H12.2714V23.8572H12.3ZM10.3857 10.7714C9.07144 10.7714 8.24284 9.88572 8.24284 8.77144C8.24284 7.62856 9.1 6.77144 10.4143 6.77144C11.7286 6.77144 12.5286 7.62856 12.5572 8.77144C12.5286 9.88572 11.7 10.7714 10.3857 10.7714ZM26.1 23.8572H22.2714V17.6857C22.2714 16.1428 21.7286 15.0857 20.3286 15.0857C19.2714 15.0857 18.6428 15.8 18.3572 16.4857C18.2714 16.7428 18.2428 17.0857 18.2428 17.4286V23.8572H14.4143C14.4143 23.8572 14.4714 13.4286 14.4143 12.3428H18.2428V13.9714C18.7572 13.2 19.6714 12.0572 21.7 12.0572C24.2143 12.0572 26.1 13.7143 26.1 17.2286V23.8572ZM18.2428 14V13.9714C18.2428 14 18.2143 14 18.2428 14Z" fill="url(#paint0_linear_602_2)"/>
@@ -54,7 +78,7 @@ block page
                     </svg>
 
                 span Jackie <b>Miller</b>
-            a(href="https://www.linkedin.com/in/andrew-michael-0b70373" class="md:text-lg lg:text-xl xl:text-2xl no-underline inline-flex items-center")
+            a(href="https://www.linkedin.com/in/andrew-michael-0b70373" target="_blank" class="md:text-lg lg:text-xl xl:text-2xl no-underline inline-flex items-center")
                 div(class="w-8 h-8 mr-2")
                     <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.5 0C7.67144 0 0.5 7.17144 0.5 16C0.5 24.8286 7.67144 32 16.5 32C25.3286 32 32.5 24.8286 32.5 16C32.5 7.17144 25.3286 0 16.5 0ZM12.3 23.8572H8.44284V12.3428H12.2714V23.8572H12.3ZM10.3857 10.7714C9.07144 10.7714 8.24284 9.88572 8.24284 8.77144C8.24284 7.62856 9.1 6.77144 10.4143 6.77144C11.7286 6.77144 12.5286 7.62856 12.5572 8.77144C12.5286 9.88572 11.7 10.7714 10.3857 10.7714ZM26.1 23.8572H22.2714V17.6857C22.2714 16.1428 21.7286 15.0857 20.3286 15.0857C19.2714 15.0857 18.6428 15.8 18.3572 16.4857C18.2714 16.7428 18.2428 17.0857 18.2428 17.4286V23.8572H14.4143C14.4143 23.8572 14.4714 13.4286 14.4143 12.3428H18.2428V13.9714C18.7572 13.2 19.6714 12.0572 21.7 12.0572C24.2143 12.0572 26.1 13.7143 26.1 17.2286V23.8572ZM18.2428 14V13.9714C18.2428 14 18.2143 14 18.2428 14Z" fill="url(#paint0_linear_602_2)"/>
@@ -70,6 +94,5 @@ block page
     include ./chunk/friends
 
 prepend footer_scripts
-
 
 

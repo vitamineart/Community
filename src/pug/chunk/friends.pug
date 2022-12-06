@@ -150,7 +150,7 @@ section(class="py-10 md:py-16")
         header(class="body-title leading-tight font-bold text-center") Friends of Friends
         div( class="mt-6 md:mt-10 items-center friends-grid" )
             each friend, index in friends
-                .card(href="#" class=`h-full w-full m-auto relative min-h-min no-underline text-black card-${friend.id}`)
+                .card(href="#" class=`h-full w-full m-auto relative min-h-min no-underline text-black group`)
                     .card-content
                         .back(class="p-5 absolute inset-0 z-50 friends-gradient shadow-xl rounded-3xl" )
                             .text(class="text-center text-white tracking-wide flex flex-col items-center h-full")
@@ -161,15 +161,15 @@ section(class="py-10 md:py-16")
 
                                 b(class="role text-xs") #{friend.role}
                                 div(class="text-[9px] pt-4 flex-1 description") #{friend.description}
-                                div(class="contacts flex items-center justify-center pt-2.5")
+                                div(class="contacts relative flex items-center justify-center pt-2.5")
                                     - let social = Object(friend.contacts)
                                     each val, key in social
-                                        a(href=`${val}` class="text-white inline-block mx-1" target="_blank")
+                                        a(href=`${val}` class="text-white inline-flex mx-1 relative hover:opacity-90 transition-opacity" target="_blank")
                                             +iconMono({
-                                                classes: 'svg w-8 h-8 fill-current',
+                                                classes: 'relative z-0 pointer-events-none fill-white w-8 h-8',
                                                 icon: key
                                             })
-                        .front.shadow-xl.bg-white.rounded-3xl.absolute.inset-0.w-full.h-full
+                        .front(class="group-hover:pointer-events-none shadow-xl bg-white rounded-3xl absolute inset-0 w-full h-full")
                             img(loading="lazy" width="170" height="170" src=`img/friends/${friend.image}@680.png` class="absolute w-full h-full inset-0 object-cover z-0 ")
                             div(class="absolute py-2.5 left-0 right-auto bottom-9 friends-gradient rounded-r-full")
                                 if (friend.name.front)
